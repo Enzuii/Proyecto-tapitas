@@ -7,7 +7,7 @@ Para poder comprobar si tenemos contaminación ,podremos verlo en los valores qu
 Si los valores de RGB indican todos 0,quiere decir que no hay contaminación.
 
 
-
+## Código del sensor
 
 
 #include "Adafruit_TCS34725.h"
