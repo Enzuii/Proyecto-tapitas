@@ -51,10 +51,10 @@ void loop() {
   if(G>255){G=255;}
   if(B>255){B=255;}
 
-  if (R > 100) {
+  if (R > 100) { //diferenciacion del rojo o colores claros
     list[0] = true;
   }
-  else if (R < 50) {
+  else if (R < 50) { //diferenciacion del negro o colores oscuros
     list[6] = true;
   }
   
@@ -105,6 +105,7 @@ void loop() {
     delay(5);
     }
   }
+  pos = colorpos;
   
  Serial.println(" R = "+String(R)+ " G = "+String(G)+ " B = "+String(B)); //mensaje en consola
  delay(1000); // cada cuanto el sensor va a detectar un color
