@@ -12,8 +12,8 @@ A4, A5 = sensor RGB
 6 = LED sensor
 8 = bocina 
 9 = servo final
-10 = servo de la tolva
-11 = Motor que destraba
+10 = servo tolva
+11 = Motor que destraba - Si no se coloca transistor con entrada de 5V y resistencia de 2K ohms, colocar motor directo a 5V.
 12, 13 = LEDs de funcionando-encendido-emergencia ---- PIN 12: Verde --- PIN 13: ROJO
 ///////////////////////////////*/
 
@@ -51,8 +51,8 @@ bool working = false;
 int tolvapos = 120;
 int servopos = 90;  //Posicion del servo
 int colorpos = 90;  //Posicion a dondde se va a mover
-int base = 30;
-int multiplier = 20; 
+int base = 15;
+int multiplier = 25; 
 int p = 0;  //Usado para el for
 
 Servo servo_tolva;
@@ -120,12 +120,12 @@ void loop() {
   }
   
   // Servo de la tolva abre y cierra
-  for (tolvapos = 120; tolvapos >= 93; tolvapos -= 1) {
+  for (tolvapos = 120; tolvapos >= 97; tolvapos -= 1) {
     servo_tolva.write(tolvapos);
     delay(10);
   }
   delay(2000);
-  for (tolvapos = 93; tolvapos <=120 ; tolvapos += 1) {
+  for (tolvapos = 97; tolvapos <=120 ; tolvapos += 1) {
     servo_tolva.write(tolvapos);
     delay(10);
   }
