@@ -7,12 +7,12 @@ Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS3472
 
 /*///////////////////////////////
 Pines usados:
+A3 = infrarrojo
 A4, A5 = sensor RGB
 2, 3, 4, 5 = Stepper
 6 = LED sensor
 8 = bocina 
-9 = servo final
-10 = servo de la tolva
+9, 10 = servofinal, servotolva
 11 = Motor que destraba
 12, 13 = LEDs de funcionando-encendido-emergencia ---- PIN 12: Verde --- PIN 13: ROJO
 ///////////////////////////////*/
@@ -51,8 +51,8 @@ bool working = false;
 int tolvapos = 120;
 int servopos = 90;  //Posicion del servo
 int colorpos = 90;  //Posicion a dondde se va a mover
-int base = 30;
-int multiplier = 20; 
+int base = 15;
+int multiplier = 25; 
 int p = 0;  //Usado para el for
 
 Servo servo_tolva;
