@@ -7,12 +7,12 @@ Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS3472
 
 /*///////////////////////////////
 Pines usados:
-A3 = infrarrojo
 A4, A5 = sensor RGB
 2, 3, 4, 5 = Stepper
 6 = LED sensor
 8 = bocina 
-9, 10 = servofinal, servotolva
+9 = servo final
+10 = servo de la tolva
 11 = Motor que destraba
 12, 13 = LEDs de funcionando-encendido-emergencia ---- PIN 12: Verde --- PIN 13: ROJO
 ///////////////////////////////*/
